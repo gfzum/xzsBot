@@ -1,1 +1,5 @@
-config.yml
+/gocqhttp/config.yml
+/gocqhttp/data
+/gocqhttp/logs
+**/__pycache__
+/xzsBot/venv
