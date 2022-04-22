@@ -1,25 +1,34 @@
 ## 致诚书院学生发展中心小助手bot
 
-### Environment
+### Intro
+
+基于 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 和 [nonebot](https://github.com/nonebot/nonebot) 的简单机器人实现。
+
+### Requirements.txt
 
 ```
-pip install nonebot
-pip install openpyxl
-pip install apscheduler
+nonebot
+openpyxl
+apscheduler
+jinja2<3.1.0
+werkzeug<2.1.0
 ```
 
 ### 目前支持的功能
 
 - 自动转发小助手私信至群聊
-- `ping` to show info
+- 今日生日查看 `xzs` + `today/brd/生日`
+- 生日表查看 `xzs` + `table/生日表`
+- boss排班查看 `xzs` + `boss/排班`
+- show info `xzs ping`
+- 24h supporting!
 
 ### Upcoming
 
-- Birthday reminder
-- Relpy to the new messages in QQ group
-- 24h supporting
+- Auto Birthday reminder
+- Relpy to new messages in QQ group
+- ddl reminder
+- College intro
+- Fun games
 
-If you have more ideas, please contact me.
-
-For safety reasons, config.yml is added to .gitignore.
-
+If you have more interesting ideas, please feel free to contact me.
