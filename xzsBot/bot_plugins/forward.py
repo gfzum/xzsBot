@@ -16,7 +16,7 @@ async def private_fwd(ctx):
     time = ctx["time"]
     text = ctx["message"][0]["data"]["text"]
 
-    msg = "收到一条消息\n Time：{}\n QQ：{}\n 昵称：{}\n {}".format(datetime.now(), userid, sender, text)
+    msg = "收到一条消息\n QQ：{}\n 昵称：{}\n {}".format(userid, sender, text)
 
     await bot.send_group_msg(group_id=912811025, message=msg)
 

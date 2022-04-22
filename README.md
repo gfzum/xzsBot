@@ -1,5 +1,13 @@
 ## 致诚书院学生发展中心小助手bot
 
+### Environment
+
+```
+pip install nonebot
+pip install openpyxl
+pip install apscheduler
+```
+
 ### 目前支持的功能
 
 - 自动转发小助手私信至群聊
