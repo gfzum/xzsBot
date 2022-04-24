@@ -33,21 +33,23 @@ for row in bd_sheet:
 #         except CQHttpError:
 #             pass
 
-now = datetime.now(pytz.timezone('Asia/Shanghai'))
-today = f"{now.year}年{now.month}月{now.day}日"
-str_today = str(now.month) + "-" + str(now.day)
-
-celebrate = ""
-if(str_today not in birthday_map):
-    celebrate = '无人贺生～'
-else:
-    celebrate = f'{birthday_map[str_today]}过生日哦～'
-
-msg = f'今天是{today}，{celebrate}'
 
 @on_command('today', aliases=('生日','brd'))
 async def _(session: CommandSession):
+    
+    now = datetime.now(pytz.timezone('Asia/Shanghai'))
+    today = f"{now.year}年{now.month}月{now.day}日"
+    str_today = str(now.month) + "-" + str(now.day)
+
+    celebrate = ""
+    if(str_today not in birthday_map):
+        celebrate = '无人贺生～'
+    else:
+        celebrate = f'{birthday_map[str_today]}过生日哦～'
+
+    msg = f'今天是{today}，{celebrate}'
     await session.send(msg)
+
 
 @on_command('生日表', aliases=('brdtable','table'))
 async def _(session: CommandSession):

@@ -21,7 +21,7 @@ werkzeug<2.1.0
 - 生日表查看 `xzs` + `table/生日表`
 - boss排班查看 `xzs` + `boss/排班`
 - show info `xzs ping`
-- 24h supporting!
+- 24h supporting!（转人工时服务暂停）
 
 ### Upcoming
 
