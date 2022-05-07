@@ -38,8 +38,13 @@ for row in bd_sheet:
 async def _(session: CommandSession):
     
     now = datetime.now(pytz.timezone('Asia/Shanghai'))
-    today = f"{now.year}年{now.month}月{now.day}日"
-    str_today = str(now.month) + "-" + str(now.day)
+    day = now.day
+    if day < 10:
+        day = f"0{day}"
+    else:
+        day = str(day)
+    today = f"{now.year}年{now.month}月{day}日"
+    str_today = str(now.month) + "-" + day
 
     celebrate = ""
     if(str_today not in birthday_map):
@@ -54,3 +59,23 @@ async def _(session: CommandSession):
 @on_command('生日表', aliases=('brdtable','table'))
 async def _(session: CommandSession):
     await session.send(show_birthday)
+
+@on_command('month')
+async def _(session: CommandSession):
+    now = datetime.now(pytz.timezone('Asia/Shanghai'))
+    month = str(now.month)
+    
+    info = f"{month}月生日表\n"
+
+    for i in range(32):
+        j = i
+        if j < 10:
+            j = f"0{j}"
+        else:
+            j = str(j)
+        date = month + "-" + j
+        print(date)
+        if date in birthday_map:
+            info += date + " " + birthday_map[date] + "\n"
+    await session.send(info)
+    
