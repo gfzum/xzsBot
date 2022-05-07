@@ -74,7 +74,7 @@ async def _(session: CommandSession):
         else:
             j = str(j)
         date = month + "-" + j
-        print(date)
+        # print(date)
         if date in birthday_map:
             info += date + " " + birthday_map[date] + "\n"
     await session.send(info)

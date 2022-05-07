@@ -17,18 +17,25 @@ werkzeug<2.1.0
 ### 目前支持的功能
 
 - 自动转发小助手私信至群聊
-- 今日生日查看 `xzs` + `today/brd/生日`
-- 生日表查看 `xzs` + `table/生日表`
-- boss排班查看 `xzs` + `boss/排班`
-- show info `xzs ping`
-- 24h supporting!（转人工时服务暂停）
+
+使用 `xzs` + 其他命令进行信息查看
+
+- 今日生日查看 + `today/brd/生日`
+- 生日表查看 + `table/生日表`
+- 每月生日查看 + `month`
+- boss排班查看 + `boss/排班`
+- show info + `ping`
+- 24h supporting!
 
 ### Upcoming
 
 - Auto Birthday reminder
+- command words blacklist
 - Relpy to new messages in QQ group
 - ddl reminder
 - College intro
 - Fun games
+- NLP
+- Dockerfile
 
 If you have more interesting ideas, please feel free to contact me.
