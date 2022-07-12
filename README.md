@@ -12,6 +12,7 @@ openpyxl
 apscheduler
 jinja2<3.1.0
 werkzeug<2.1.0
+openpyxl<2.4.9
 ```
 
 ### 常规功能

@@ -4,3 +4,4 @@
 **/__pycache__
 /xzsBot/venv
 **/.idea
+*/session.token
