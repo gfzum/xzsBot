@@ -1,8 +1,8 @@
 from nonebot.command import CommandSession
 from nonebot.plugin import on_command, get_loaded_plugins
-from services.command_use_count import record_successful_invocation
+# from services.command_use_count import record_successful_invocation
 
-__plugin_name__ = '帮助'
+# __plugin_name__ = '帮助'
 __plugin_usage__ = (
     '对我说 “help” 获取可以查询的功能\n'
     '“help 功能名” 获取对应详细帮助'
@@ -16,7 +16,7 @@ async def _(session: CommandSession):
 help_permission = lambda sender: (not sender.is_privatechat) or sender.is_superuser
 
 @on_command('help', aliases={'帮助'})
-@record_successful_invocation('help')
+# @record_successful_invocation('help')
 async def _(session: CommandSession):
     # 获取加载的插件，注意名字以 _h 结尾的不应该被展示！
     plugins = (p for p in get_loaded_plugins() if p.name and not p.name.endswith('_h'))
@@ -25,9 +25,9 @@ async def _(session: CommandSession):
     # 没有参数：展示功能列表
     if not arg:
         await session.send(
-            '有疑问欢迎随时提问or查看在线文档，群文件里有宣传手册！' + 
-            '\n输入xzs (关键词)进行对应查询：\n  ' + '\n  '.join(p.name for p in plugins) +
-            '\n项目介绍及源码:https://github.com/gfzum/xzsBot'
+            '欢迎大家随时提问、查看在线文档，群文件里即将上传宣传手册！\n' + 
+            '\n输入xzs + 关键词 查询信息：\n  ' + '\n  '.join(p.name for p in plugins) +
+            '\n\n项目介绍及源码:https://github.com/gfzum/xzsBot，欢迎提供更多有趣的想法！'
         )
     # 有参数：展示对应 usage
     else:

@@ -1,8 +1,8 @@
 import pytz
 from datetime import datetime
 from aiocqhttp.exceptions import Error as CQHttpError
-from nonebot.command import CommandSession
 from nonebot.plugin import on_command
+from nonebot import on_command, CommandSession, SenderRoles
 
 day_map = {0:0, 1:31, 2:28, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11:30, 12:31}
 boss_map = {1:'小曹', 2:'戴sir', 3:'巩sir', 4:'罗某', 5:'王sir', 6:'夏sir', 7:'小杨', 8:'许sir', 9:'罗sir'}
@@ -18,7 +18,7 @@ def index_add(i):
 permit_group = { 912811025 }
 banned_people = { 10000, 10001 }
 def foo(sender: SenderRoles):
-    return sender.is_groupchat and sender.from_group(permit_group) and not sender.sendby(banned_people)\
+    return sender.is_groupchat and sender.from_group(permit_group) and not sender.sent_by(banned_people)\
     or sender.is_superuser
 
 

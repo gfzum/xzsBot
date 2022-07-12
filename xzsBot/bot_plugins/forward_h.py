@@ -7,7 +7,7 @@ from nonebot.helpers import send_to_superusers
 from nonebot.notice_request import RequestSession
 
 
-__plugin_name__ = 'forward msg'
+# __plugin_name__ = 'forward msg'
 
 bot = get_bot()
 

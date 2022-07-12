@@ -1,4 +1,4 @@
-from nonebot.command import CommandSession
+from nonebot import on_command, CommandSession, SenderRoles
 from nonebot.plugin import on_command
 import pytz
 from datetime import datetime
@@ -37,7 +37,7 @@ for row in bd_sheet:
 permit_group = { 912811025 }
 banned_people = { 10000, 10001 }
 def foo(sender: SenderRoles):
-    return (sender.is_groupchat and sender.from_group(permit_group) and not sender.sendby(banned_people)) \
+    return (sender.is_groupchat and sender.from_group(permit_group) and not sender.sent_by(banned_people))\
     or sender.is_superuser
 
 @on_command('today', aliases=('生日','brd'), permission=foo)
@@ -62,11 +62,11 @@ async def _(session: CommandSession):
     await session.send(msg)
 
 
-@on_command('生日表', aliases=('brdtable','table'))
+@on_command('生日表', aliases=('brdtable','table'), permission=foo)
 async def _(session: CommandSession):
     await session.send(show_birthday)
 
-@on_command('month')
+@on_command('month', permission=foo)
 async def _(session: CommandSession):
     now = datetime.now(pytz.timezone('Asia/Shanghai'))
     month = str(now.month)
