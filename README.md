@@ -14,18 +14,26 @@ jinja2<3.1.0
 werkzeug<2.1.0
 ```
 
-### 目前支持的功能
+### 常规功能
 
-- 自动转发小助手私信至群聊
+使用 `xzs` + 关键词 查看信息
 
-使用 `xzs` + 其他命令进行信息查看
+| 功能 | 关键词 |
+| ---- | ----- |
+| 获取在线文档 | `doc`, `文档`, `答疑`, `在线文档`, `在线答疑`  |
+| 书院公众号二维码 | `gzh`, `qrcode`, `ewm`, `二维码`, `公众号`, `推送`  |
+| 帮助 | `help`, `帮助` |
 
-- 今日生日查看 + `today/brd/生日`
-- 生日表查看 + `table/生日表`
-- 每月生日查看 + `month`
-- boss排班查看 + `boss/排班`
-- show info + `ping`
-- 24h supporting!
+### Boss 功能
+
+- 自动转发小助手私信至 boss 群聊
+
+| 功能 | 关键词 |
+| ---- | ----- |
+| 今日生日查看 | `today`, `brd`, `生日`  |
+| 总生日表查看 | `table`, `生日表` |
+| 每月生日查看 | `month`|
+| boss排班查看 | `boss`, `排班` |
 
 ### Upcoming
 
@@ -33,9 +41,8 @@ werkzeug<2.1.0
 - command words blacklist
 - Relpy to new messages in QQ group
 - ddl reminder
-- College intro
 - Fun games
 - NLP
-- Dockerfile
+- Dockerfile and CI
 
 If you have more interesting ideas, please feel free to contact me.

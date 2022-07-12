@@ -14,8 +14,15 @@ def index_add(i):
         i -= 9
     return i
 
-#todo: group restriction
-@on_command('boss', aliases=('排班'))
+#group restriction
+permit_group = { 912811025 }
+banned_people = { 10000, 10001 }
+def foo(sender: SenderRoles):
+    return sender.is_groupchat and sender.from_group(permit_group) and not sender.sendby(banned_people)\
+    or sender.is_superuser
+
+
+@on_command('boss', aliases=('排班'), permission=foo)
 async def _(session: CommandSession):
     now = datetime.now(pytz.timezone('Asia/Shanghai'))
     month = now.month

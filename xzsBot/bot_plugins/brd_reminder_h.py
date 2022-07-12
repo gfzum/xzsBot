@@ -33,8 +33,14 @@ for row in bd_sheet:
 #         except CQHttpError:
 #             pass
 
+#group restriction
+permit_group = { 912811025 }
+banned_people = { 10000, 10001 }
+def foo(sender: SenderRoles):
+    return (sender.is_groupchat and sender.from_group(permit_group) and not sender.sendby(banned_people)) \
+    or sender.is_superuser
 
-@on_command('today', aliases=('生日','brd'))
+@on_command('today', aliases=('生日','brd'), permission=foo)
 async def _(session: CommandSession):
     
     now = datetime.now(pytz.timezone('Asia/Shanghai'))
