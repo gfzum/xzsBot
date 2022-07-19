@@ -1,7 +1,7 @@
 from nonebot.command import CommandSession
 from nonebot.plugin import on_command
 
-__plugin_name__ = '公众号 / gzh / 二维码'
+__plugin_name__ = '公众号/gzh/二维码'
 __plugin_usage__ = (
     '获取致诚书院公众号二维码'
 )

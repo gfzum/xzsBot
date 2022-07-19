@@ -1,7 +1,7 @@
 from nonebot.command import CommandSession
 from nonebot.plugin import on_command
 
-__plugin_name__ = '文档 / doc'
+__plugin_name__ = '文档/doc'
 __plugin_usage__ = (
     '获取在线文档链接'
 )
