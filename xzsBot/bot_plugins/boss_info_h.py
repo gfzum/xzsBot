@@ -5,8 +5,7 @@ from nonebot.plugin import on_command
 from nonebot import on_command, CommandSession, SenderRoles
 
 day_map = {0:0, 1:31, 2:28, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11:30, 12:31}
-boss_map = {1:'小曹', 2:'戴sir', 3:'巩sir', 4:'罗某', 5:'王sir', 6:'夏sir', 7:'小杨', 8:'许sir', 9:'罗sir'}
-
+boss_map = {1:'谢sir', 2:'戴sir', 3:'巩sir', 4:'罗某', 5:'王sir', 6:'夏sir', 7:'小杨', 8:'许sir', 9:'罗sir'}
 
 def index_add(i):
     i = i + 1

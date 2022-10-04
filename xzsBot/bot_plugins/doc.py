@@ -13,4 +13,4 @@ async def _(session: CommandSession):
     "报到前，除防疫相关要求外，还需要完成12项报到任务，请在完成后填写如下表格：" + 
     "https://docs.qq.com/sheet/DZWF0eGNwTG9uY2xr\n\n"+
     "更多问题，请补充在在线答疑文档中：" + 
-    "https://docs.qq.com/sheet/DZUNXbHRpZEdqSWZH\n\n")
+    "https://docs.qq.com/sheet/DZUNXbHRpZEdqSWZH")

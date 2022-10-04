@@ -6,13 +6,13 @@ from openpyxl import load_workbook
 from aiocqhttp.exceptions import Error as CQHttpError
 
 # get sheet1
-bd_sheet = load_workbook('/home/gfzum/Scripts/xzs/xzsBot/data/birthday.xlsx').active
+bd_sheet = load_workbook('/home/gfzum/Scripts/xzs/xzsBot/data/birthday_2022.xlsx').active
 
 birthday_map = {}
 show_birthday = "生日表\n"
 
 for row in bd_sheet:
-    if row[0].value != 'date':
+    if row[0].value != 'date' and row[0].value != None:
         date = str(row[0].value).replace('.', '-')
         name = row[1].value.replace('\n',' 和 ')
         birthday_map[date] = name
