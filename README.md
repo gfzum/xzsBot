@@ -13,11 +13,25 @@ apscheduler
 jinja2<3.1.0
 werkzeug<2.1.0
 openpyxl<2.4.9
+nonebot[scheduler]
 ```
 
-### 常规功能
+### Boss 功能
 
 使用 `xzs` 或 `小助手` + 关键词 查看信息
+
+- 自动转发小助手私信至 boss 群聊
+- 生日自动提醒
+
+| 功能 | 关键词 |
+| ---- | ----- |
+| 今日生日查看 | `today` `brd` `生日`  |
+| 总生日表查看 | `table` `生日表` |
+| 每月生日查看 | `month`|
+| boss排班查看 | `boss` `排班` |
+| 帮助 | `help` `帮助` |
+
+### Out-of-date
 
 | 功能 | 关键词 |
 | ---- | ----- |
@@ -27,25 +41,13 @@ openpyxl<2.4.9
 | 书院公众号二维码 | `gzh` `qrcode` `ewm` `二维码` `公众号` `推送`  |
 | 书院手册获取 | `man` `manual` `手册` |
 | 书院导师信息 | `ds` `tea` `导师` |
-| 帮助 | `help` `帮助` |
-
-### Boss 功能
-
-- 自动转发小助手私信至 boss 群聊
-
-| 功能 | 关键词 |
-| ---- | ----- |
-| 今日生日查看 | `today` `brd` `生日`  |
-| 总生日表查看 | `table` `生日表` |
-| 每月生日查看 | `month`|
-| boss排班查看 | `boss` `排班` |
 
 ### Upcoming
 
-- Auto Birthday reminder
+- Auto Birthday reminder √
 - command words blacklist
 - Relpy to new messages in QQ group
-- ddl reminder
+- ddl reminder ×
 - Fun games
 - NLP
 - Dockerfile and CI

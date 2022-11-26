@@ -5,3 +5,5 @@
 /xzsBot/venv
 **/.idea
 */session.token
+dumps/
+archives/

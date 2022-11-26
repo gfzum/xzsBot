@@ -25,7 +25,6 @@ async def _(session: CommandSession):
     # 没有参数：展示功能列表
     if not arg:
         await session.send(
-            '欢迎大家随时提问、查看在线文档，群文件里有致诚宣传手册～\n' + 
             '\n输入xzs + 关键词 查询信息：\n  ' + '\n  '.join(p.name for p in plugins) +
             '\n\n项目介绍及源码:https://github.com/gfzum/xzsBot，欢迎提供更多有趣的想法！'
         )
