@@ -1,2 +1,4 @@
-s = ['123', '234']
-print(str(s))
+import re
+s = '3242'
+t = re.split('-|\.', s)
+print(t)

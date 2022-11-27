@@ -29,7 +29,7 @@ for row in bd_sheet:
         async def _():
             try:
                 msg = today()
-                await nonebot.get_bot.send_group_msg(group_id=912811025, message=msg)
+                await nonebot.get_bot().send_group_msg(group_id=912811025, message=msg)
             except CQHttpError:
                 pass
 show_birthday = show_birthday[:-1]

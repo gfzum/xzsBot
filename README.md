@@ -22,9 +22,11 @@ nonebot[scheduler]
 
 - 自动转发小助手私信至 boss 群聊
 - 生日自动提醒
+- ddl提醒功能
 
 | 功能 | 关键词 |
 | ---- | ----- |
+| ddl提醒设置 | `ddl` |
 | 今日生日查看 | `today` `brd` `生日`  |
 | 总生日表查看 | `table` `生日表` |
 | 每月生日查看 | `month`|
@@ -47,7 +49,7 @@ nonebot[scheduler]
 - Auto Birthday reminder √
 - command words blacklist
 - Relpy to new messages in QQ group
-- ddl reminder ×
+- ddl reminder √
 - Fun games
 - NLP
 - Dockerfile and CI
